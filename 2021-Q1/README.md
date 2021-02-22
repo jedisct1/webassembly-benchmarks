@@ -55,7 +55,7 @@ Good news: all the tests passed flawlessly on all runtimes. Previously, the same
 
 `V8` (`nodejs`) being the second top performer was quite of a surprise. `WAVM` and `wasmer-llvm` compile everything ahead of time, taking the time to apply as many optimizations as they can. `V8` has two WebAssembly compilers: `LiftOff`, a single-pass compiler, and `TurboFan`, a massively parallel compiler that applies more aggressive optimizations. The combination provides instant start-up. Then, optimal speed is not going to be reached immediately, but I didn't expect `TurboFan` to be that good after it kicks in.
 
-Previous V8 libsodium benchmarks relied on `wasmer-js`, but as Node now includes an experimental WASI implementation, this is what was used here.
+Previous V8 libsodium benchmarks relied on `wasmer-js`, but as NodeJS now includes an experimental WASI implementation, this is what was used here.
 
 `wasmer` with the `singlepass` backend also did really well here. It performing almost as well as the JIT backend was unexpected, and I ran these benchmarks twice to make sure that I didn't get something wrong. A look at individual tests shows the same pattern for each of them, with two minor exceptions. `singlepass` is also very fast to compile.
 
@@ -143,7 +143,7 @@ The binary was installed via the `curl` command indicated on the project's home 
 
 On this platform, with benchmarks not having platform-specific optimizations, `wasmtime` runs the test suite at ~54% the speed of native code. Not bad at all! 
 
-Node is a little bit behind, running at around 49% the speed of native code.
+NodeJS is a little bit behind, running at around 49% the speed of native code.
 
 Even with the same backend, `wasmer` is behind `wasmtime`, including on `aarch64`. `wasmtime` really got some nice performance improvements recently!
 
@@ -161,13 +161,13 @@ These new results are interesting. Amazing work has been done by all runtimes in
 
 If you are looking for a general recommendation for running WebAssembly code in a headless environment, here we go:
 
-_-> Just use Node._
+_-> Just use NodeJS._
 
-Not exactly what I was expecting. But Node is probably a good answer for most people. V8 has become a really damn good engine to run WebAssembly code, Node has a working WASI implementation, so there is absolutely nothing wrong with using Node, even just to run a pure WebAssembly application.
+Not exactly what I was expecting. But NodeJS is probably a good answer for most people. V8 has become a really damn good engine to run WebAssembly code, NodeJS has a working WASI implementation, so there is absolutely nothing wrong with using NodeJS, even just to run a pure WebAssembly application.
 
-This is a boring and conservative choice. But it does the job. Node has the advantage of being already available in most operating systems/linux distros. Instant integration with JavaScript is also a big plus. And you'll be only one step away from also running your code in a web browser or Electron, with comparable performance.
+This is a boring and conservative choice. But it does the job. NodeJS has the advantage of being already available in most operating systems/linux distros. Instant integration with JavaScript is also a big plus. And you'll be only one step away from also running your code in a web browser or Electron, with comparable performance.
 
-This advice may come a bit premature, though. As of today, WASI support in Node still has the "experimental" tag. But it's there, and it works. It may not be the most memory-efficient solution, though. So, if this is a concern, you may want to look at alternatives.
+This advice may come a bit premature, though. As of today, WASI support in NodeJS still has the "experimental" tag. But it's there, and it works. It may not be the most memory-efficient solution, though. So, if this is a concern, you may want to look at alternatives.
 
 Are you looking for the best possible performance to build a "serverless" infrastructure? `WAVM` may be better a choice, combined with "snapshots" of the linear memory made after initialization, as done in the excellent [FAASM](https://github.com/faasm/faasm).
 
