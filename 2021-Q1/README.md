@@ -82,7 +82,7 @@ So, where are we?
 
 Native code is about 30 times faster than `wasm3`. Let's face it: this is quite good! We're talking about an interpreter here. Versus native code highly optimized for a target CPU. And a WebAssembly transform in the way, requiring the interpreter to do bound checking everywhere.
 
-`wamr` was slower than `wasm3` on every single test. Native code is about 46 times faster. Which is still quite decent for an interpreter.
+`wamr` was slower than `wasm3` on every single test. Native code is about 46 times faster. Which remains decent for an interpreter.
 
 ## Battle of the LLVMs
 
