@@ -65,7 +65,7 @@ Another surprise is `wasmtime` performance. Remember that it uses [`cranelift`](
 
 So, what happened? `lucet`'s performance likely didn't change. What is more likely to have happened is that `wasmtime` got a brutal speed boost after switching to the latest `cranelift` version and the new backends it comes with. `lucet` and `wasmer-cranelift` are bound to see the same performance boost once they also upgrade their `cranelift` dependency.
 
-Trying to confirm that theory, I updated the `cranelift` dependency to the `0.23.0` version, and enabled the `new-x64-backend` feature flag to use the new backend. It didn't make any significant difference, so there may be something else that `wasmtime` does and that `lucet` and `wasmer` don't.
+Trying to confirm that theory, I updated the `cranelift` dependency to the `0.23.0` version, and enabled the `new-x64-backend` feature flag to use the new backend. It didn't make any significant difference, so there has to be something else that `wasmtime` does and that `lucet` and `wasmer` don't.
 
 ## Interpreters
 
@@ -108,7 +108,7 @@ Understandably, `SSVM` is still a young project, so it may still not be very sta
 
 ![webassembly benchmark results on ARM](aarch64.png)
 
-The previous benchmarks were done on machines with an Intel CPU. But with ARM CPUs being omnipresent on mobile devices, and gaining a lot of traction on servers and laptops, I had to run quick benchmarks on an ARM-based CPU.
+The previous benchmarks were done on machines with an Intel CPU. But with ARM CPUs being omnipresent on mobile devices, and gaining a lot of traction on servers and laptops, I had to run quick benchmarks on an ARM-based CPU, too.
 
 Libsodium (especially `1.0.18-stable`) doesn't have optimized code for ARM CPUs, so native code has little to no advantage over a WebAssembly equivalent.
 
