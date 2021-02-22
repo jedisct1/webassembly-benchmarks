@@ -137,13 +137,15 @@ Compilation error: Architecture aarch64 not supported
 The `singlepass` compiler is not included in this binary.
 ```
 
-The binary was installed via the `curl` command indicated on the project's home page. Sorry Wasmer, but I have to give up at that point. 
+The binary was installed via the `curl` command indicated on the project's home page. Sorry Wasmer, but I have to give up at that point. So, only the `cranelift` backend could be tested.
 
 ![webassembly benchmark results on ARM](aarch64.png)
 
 On this platform, with benchmarks not having platform-specific optimizations, `wasmtime` runs the test suite at ~54% the speed of native code. Not bad at all! 
 
 Node is a little bit behind, running at around 49% the speed of native code.
+
+Even with the same backend, `wasmer` is behind `wasmtime` on `aarch64`. `wasmtime` really got some nice performence improvements recently.
 
 Of course, `wasm3` runs fine on `aarch64`, but at about 3% of native speed.
 
