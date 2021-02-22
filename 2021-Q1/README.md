@@ -145,7 +145,7 @@ On this platform, with benchmarks not having platform-specific optimizations, `w
 
 Node is a little bit behind, running at around 49% the speed of native code.
 
-Of course, `wasm3` runs fine on that `aarch64`, but at about 3% of the native speed.
+Of course, `wasm3` runs fine on `aarch64`, but at about 3% of the native speed.
 
 ![webassembly benchmark with wasm3 results on ARM](aarch64-with-wasm3.png)
 
