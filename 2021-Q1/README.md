@@ -102,7 +102,7 @@ Unfortunately, there's a catch. 5 of the tests crashed on `SSVM` with the follow
 ERROR [default] execution failed: unreachable, Code: 0x89
 ```
 
-Understandably, `SSVM` is still a young project, so it may still not be very stable.
+Understandably, `SSVM` is still a young project, so it may not be very stable yet.
 
 ## ARM CPUs
 
