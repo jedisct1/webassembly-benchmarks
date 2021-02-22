@@ -47,16 +47,17 @@ In order for the comparison between WebAssembly and native code to remain fair a
 
 ![webassembly benchmark results on macOS](macos.png)
 
-Good news: all the tests passed flawlessly on all runtimes. Previously, the same tests triggered bugs in some implementations, that have been fixed since.
+Good news: all the tests passed flawlessly on all runtimes. Previously, the same benchmark triggered bugs in some implementations, that have been fixed since.
 
-`WAVM` remains the fastest WebAssembly runtime, smoking the competition in every single test.
+`WAVM` remains the fastest WebAssembly runtime, beating the competition in every single test.
 
-`WAVM` is based on `LLVM`. We may expect the `LLVM` backend of `wasmer` to perform pretty much the same, but `WAVM` was about 15% faster than `wasmer`.
+`WAVM` is based on `LLVM`. Intuitively, we may expect the `LLVM` backend of `wasmer` to perform pretty much the same, but `WAVM` was still about 15% faster than `wasmer`.
 
 `V8` (`nodejs`) being the second top performer was quite of a surprise. `WAVM` and `wasmer-llvm` compile everything ahead of time, taking the time to apply as many optimizations as they can. `V8` has two WebAssembly compilers: `LiftOff`, a single-pass compiler, and `TurboFan`, a massively parallel compiler that applies more aggressive optimizations. The combination provides instant start-up. Then, optimal speed is not going to be reached immediately, but I didn't expect `TurboFan` to be that good after it kicks in.
+
 Previous V8 libsodium benchmarks relied on `wasmer-js`, but as Node now includes an experimental WASI implementation, this is what was used here.
 
-`wasmer` with the `singlepass` backend also did really well here. It performing almost as well as the JIT backend was unexpected, and I ran these benchmarks twice to make sure that I didn't get something wrong. A look at individual tests shows the same pattern for each of them, with two minor exceptions. `singlepass` compiles really fast, supposedly with very little optimizations.
+`wasmer` with the `singlepass` backend also did really well here. It performing almost as well as the JIT backend was unexpected, and I ran these benchmarks twice to make sure that I didn't get something wrong. A look at individual tests shows the same pattern for each of them, with two minor exceptions. `singlepass` is also very fast to compile.
 
 Another surprise is the `wasmtime` performance. Remember that it uses `cranelift`, a very young code generator, written from scratch. Its performance now isn't far from LLVM-based runtimes, which is a very impressive achievement.
 
