@@ -86,11 +86,11 @@ Native code is about 30 times faster than `wasm3`. Let's face it: this is quite 
 
 ## Battle of the LLVMs
 
-![webassembly benchmark results on Linux](linux-x86_64.png)
-
 `SSVM` (Second State VM) is an LLVM-based runtime focused on performance. It comes as two separate applications: a compiler, that generates a native shared library, and a runtime, that loads a library precompiled with the former tool. Like `wasmer`, it can insert "gas counting" operations, which is useful for smart contracts.
 
 Unfortunately, SSVM only supports Linux/x86_64. So, I couldn't run it on my laptop along with the other tests. I thus conducted another set of benchmarks, on a Linux/x86_64 machine, to compare LLVM-based runtimes.
+
+![webassembly benchmark results on Linux](linux-x86_64.png)
 
 Although `wasmer`'s LLVM backend is consistently faster than other LLVM-based runtimes, the resulting code is not the fastest.
 
@@ -105,8 +105,6 @@ ERROR [default] execution failed: unreachable, Code: 0x89
 Understandably, `SSVM` is still a young project, so it may not be very stable yet.
 
 ## ARM CPUs
-
-![webassembly benchmark results on ARM](aarch64.png)
 
 The previous benchmarks were done on machines with an Intel CPU. But with ARM CPUs being omnipresent on mobile devices, and gaining a lot of traction on servers and laptops, I had to run quick benchmarks on an ARM-based CPU, too.
 
@@ -140,6 +138,8 @@ The `singlepass` compiler is not included in this binary.
 ```
 
 The binary was installed via the `curl` command indicated on the project's home page. Sorry Wasmer, but I have to give up at that point. 
+
+![webassembly benchmark results on ARM](aarch64.png)
 
 On this platform, with benchmarks not having platform-specific optimizations, `wasmtime` runs the test suite at ~54% the speed of native code. Not bad at all! 
 
