@@ -148,7 +148,7 @@ Of course, `wasm3` runs fine on that `aarch64`, but at about 3% of the native sp
 
 ## Individual results
 
-Individual results can be downloaded here. With minor exceptions, runtimes ranked the same in every test. The WebAssembly files used for these benchmarks can also be downloaded at the same location. They all print their own execution time, excluding initialization.
+Individual results can be downloaded [here](https://github.com/jedisct1/webassembly-benchmarks/tree/master/2021-Q1/output). With minor exceptions, runtimes ranked the same in every test. The WebAssembly files used for these benchmarks can also be downloaded [here](https://github.com/jedisct1/webassembly-benchmarks/tree/master/2021-Q1/wasm). They all print their own execution time, excluding initialization.
 
 ## Verdict
 
