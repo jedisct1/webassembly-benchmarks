@@ -94,7 +94,7 @@ Unfortunately, SSVM only supports Linux/x86_64. So, I couldn't run it on my lapt
 
 Although `wasmer`'s LLVM backend is consistently faster than other LLVM-based runtimes, the resulting code is not the fastest.
 
-`wavm` remains undethroned, but `SSVM` is really close.
+`wavm` remains undethroned, but `SSVM` comes really close.
 
 Unfortunately, there's a catch. 5 of the tests crashed on `SSVM` with the following message:
 
