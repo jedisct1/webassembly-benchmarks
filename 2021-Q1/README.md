@@ -112,7 +112,7 @@ The previous benchmarks were done on machines with an Intel CPU. But with ARM CP
 
 Libsodium (especially `1.0.18-stable`) doesn't have optimized code for ARM CPUs, so native code has little to no advantage over a WebAssembly equivalent.
 
-I use prepackaged software here.
+This time, I used prepackaged software.
 
 `WAVM` supports `aarch64` CPUs, but doesn't provide pre-compiled binaries, and compiling LLVM on my router would take forever. So, I had to pass on it for now.
 
