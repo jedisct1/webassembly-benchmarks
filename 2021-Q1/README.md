@@ -175,6 +175,6 @@ For untrusted applications, and if you are into Rust, you may want to consider `
 
 Are you looking for a one-runtime-to-rule-them-all thing for multiple components of your application, written in a variety of programming languages? `wasmer` will probably be the easiest to integrate.
 
-Are you looking for a way to test the latest WebAssembly proposals? Check out `wasmtime`. Ditto if you need to [run WebAssembly modules from Zig](https://github.com/kubkon/wasmtime-zig). And `wasmtime` seems to perform well on ARM CPUs, although I wish I could test on one of these fancy new Apple M1 machines.
+Are you looking for a way to test the latest WebAssembly proposals? Check out `wasmtime`. Ditto if you need to [run WebAssembly modules from Zig](https://github.com/kubkon/wasmtime-zig). `wasmtime` is fast, even on ARM CPUs, although I wish I could test on one of these fancy new Apple M1 machines.
 
 Finally, if you need something simple, lightweight, that works everywhere, `wasm3` is your friend.
