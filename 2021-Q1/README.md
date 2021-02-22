@@ -65,7 +65,7 @@ Another surprise is `wasmtime` performance. Remember that it uses [`cranelift`](
 
 So, what happened? `lucet`'s performance likely didn't change. What is more likely to have happened is that `wasmtime` got a brutal speed boost after switching to the latest `cranelift` version and the new backends it comes with. `lucet` and `wasmer-cranelift` are bound to see the same performance boost once they also upgrade their `cranelift` dependency.
 
-Trying to confirm that theory, I updated the `lucet`'s `cranelift` dependency to the `0.23.0` version, and enabled the `new-x64-backend` feature flag to use the new backend. It didn't make any significant difference, so there has to be something else that `wasmtime` does and that `lucet` and `wasmer` don't.
+Trying to confirm that theory, I updated the `lucet`'s `cranelift` dependency to the `0.23.0` version, and enabled the `new-x64-backend` feature flag to use the new backend. It made a difference, but didn't get close to `wasmtime`'s results, so there has to be something else that `wasmtime` does and that `lucet` and `wasmer` don't.
 
 ## Interpreters
 
