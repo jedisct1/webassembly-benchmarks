@@ -167,7 +167,7 @@ This is a boring and conservative choice. But it does the job. Node has the adva
 
 This advice may come a bit premature, though. As of today, WASI support in Node still has the "experimental" tag. But it's there, and it works.
 
-Are you looking for the best possible performance to build a function-as-a-service/serverless platform? `WAVM` may be better a choice, combined with "snapshots" of the linear memory made after initialization, as done in the excellent [FAASM](https://github.com/faasm/faasm).
+Are you looking for the best possible performance to build a "serverless" infrastructure? `WAVM` may be better a choice, combined with "snapshots" of the linear memory made after initialization, as done in the excellent [FAASM](https://github.com/faasm/faasm).
 
 For untrusted applications, and if you are into Rust, you may want to consider `lucet` and its unique ability to stop/resume/reschedule execution.
 
