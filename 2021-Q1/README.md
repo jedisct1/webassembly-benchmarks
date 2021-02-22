@@ -1,6 +1,6 @@
 # Benchmark of WebAssembly runtimes - 2021 Q1 edition
 
-Libsodium has been fully supporting WebAssembly as a target for quite a long time. This includes its built-in benchmark suite, that can run both in web browsers and in a variety of standalone WebAssembly runtimes.
+Libsodium has been fully supporting WebAssembly as a target for quite a long time. This includes its built-in benchmark suite, that can run both [in web browsers](https://download.libsodium.org/libsodium.js/browsers-test/) and in a variety of standalone WebAssembly runtimes.
 
 The benchmark covers different types of cryptographic primitives. Some are purely computational tasks, some are memory-hard, some require efficient register allocation, some require optimal instruction scheduling, some can greatly benefit from vectorization, some don't benefit from vectorization at all. It also includes utility functions such as codecs.
 
