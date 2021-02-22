@@ -167,7 +167,7 @@ Not exactly what I was expecting. But Node is probably a good answer for most pe
 
 This is a boring and conservative choice. But it does the job. Node has the advantage of being already available in most operating systems/linux distros. Instant integration with JavaScript is also a big plus. And you'll be only one step away from also running your code in a web browser or Electron, with comparable performance.
 
-This advice may come a bit premature, though. As of today, WASI support in Node still has the "experimental" tag. But it's there, and it works.
+This advice may come a bit premature, though. As of today, WASI support in Node still has the "experimental" tag. But it's there, and it works. It may not be the most memory-efficient solution, though. So, if this is a concern, you may want to look at alternatives.
 
 Are you looking for the best possible performance to build a "serverless" infrastructure? `WAVM` may be better a choice, combined with "snapshots" of the linear memory made after initialization, as done in the excellent [FAASM](https://github.com/faasm/faasm).
 
