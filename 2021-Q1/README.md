@@ -14,11 +14,11 @@ There are quite a lot of WebAssembly runtimes around. However, in early 2021, mo
 
 That can be easily explained. WebAssembly as a byte code and a memory model specification looks really simple and fun to implement, akin to writing a toy VM for a corewar game.
 
-This is actually how it originally looked. Since then, WebAssembly evolved, and keeps evolving to become a full-fledged platform. Implementing a WebAssembly runtime has become significantly more complicated and time-consuming. Runtimes such as [EOS](https://github.com/EOSIO/eos) kept the bytecode and chose to build their own ecosystem.
+This is actually how it originally looked. Since then, WebAssembly evolved, and keeps evolving to become a full-fledged platform. Implementing a WebAssembly runtime has become significantly more challenging and time-consuming. Runtimes such as [EOS](https://github.com/EOSIO/eos) kept the bytecode and chose to build their own ecosystem.
 
 Meanwhile, ton of improvements were made by already well-established runtimes in the past few months. A good opportunity to run a new round of the libsodium benchmarks to see if major performance changes can be observed.
 
-Older versions of the following runtimes had been tested in the previous rounds:
+Returning runtimes from the previous rounds:
 
 * [wasmer](https://wasmer.io)
 * [wasmtime](https://wasmtime.dev)
