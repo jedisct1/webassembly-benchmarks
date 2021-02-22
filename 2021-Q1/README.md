@@ -59,9 +59,11 @@ Previous V8 libsodium benchmarks relied on `wasmer-js`, but as Node now includes
 
 `wasmer` with the `singlepass` backend also did really well here. It performing almost as well as the JIT backend was unexpected, and I ran these benchmarks twice to make sure that I didn't get something wrong. A look at individual tests shows the same pattern for each of them, with two minor exceptions. `singlepass` is also very fast to compile.
 
-Another surprise is `wasmtime` performance. Remember that it uses `cranelift`, a very young code generator, written from scratch. Its performance now isn't far from LLVM-based runtimes, which is a very impressive achievement.
+Another surprise is `wasmtime` performance. Remember that it uses [`cranelift`](https://github.com/bytecodealliance/wasmtime/tree/main/cranelift), a very young code generator, written from scratch. Its performance is already not far from LLVM-based runtimes, which is a very impressive achievement.
 
-`lucet` is the slowest WebAssembly runtime. But in the previous rounds, it was neck-to-neck with `wasmtime`. So, what happened? `lucet`'s performance likely didn't change. What is more likely to have happened is that `wasmtime` got a brutal speed boost after switching to the latest `cranelift` version and the new backends it comes with. `lucet` and `wasmer-cranelift` are bound to see the same performance boost once they also upgrade their `cranelift` dependency.
+`lucet` is the slowest WebAssembly runtime. But in the previous rounds, it was neck-to-neck with `wasmtime`.
+
+So, what happened? `lucet`'s performance likely didn't change. What is more likely to have happened is that `wasmtime` got a brutal speed boost after switching to the latest `cranelift` version and the new backends it comes with. `lucet` and `wasmer-cranelift` are bound to see the same performance boost once they also upgrade their `cranelift` dependency.
 
 Trying to confirm that theory, I updated the `cranelift` dependency to the `0.23.0` version, and enabled the `new-x64-backend` feature flag to use the new backend. It didn't make any significant difference, so there may be something else that `wasmtime` does and that `lucet` and `wasmer` don't.
 
