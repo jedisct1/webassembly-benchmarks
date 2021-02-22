@@ -73,7 +73,7 @@ Trying to confirm that theory, I updated the `cranelift` dependency to the `0.23
 
 Among the existing WebAssembly interpreters, two of them have good performance and WASI support: `wasm3` and `wamr` (Intel's micro-runtime).
 
-`wasm3` is a really great piece of code. It is just a bunch of small, portable, zero-dependencies C code, that can easily be embedded into any project, including iOS applications. It can also itself be compiled to WebAssembly, [which is pretty cool](https://webassembly.sh/?run-command=wasm3). System requirements: ~64Kb for code and ~10Kb RAM. This is ridiculously low, making `wasm3` a decent choice on constrained environments. I also found it to be very convenient for debugging WebAssembly linking issues.
+`wasm3` is a really great piece of code. It is just a bunch of small, portable, zero-dependencies C code, that can easily be embedded into any project, including iOS applications. It can also itself be compiled to WebAssembly, [which is pretty cool](https://webassembly.sh/?run-command=wasm3). System requirements: ~64Kb for code and ~10Kb RAM. This is ridiculously low, making `wasm3` a decent choice for constrained environments. I also found it to be very convenient for debugging WebAssembly linking issues.
 
 `WAMR` or `iamr` is another small runtime, developed by Intel. It is slightly more complicated to use, as it requires a specific toolchain to be compiled and has various features that can be chosen at compile-time. It can also leverage LLVM to provide JIT and AOT capabilities, which is a little bit disturbing and probably not why you would use such a project for.
 However, it just got a "fast interpreter", so I had to give it a spin.
@@ -145,7 +145,7 @@ On this platform, with benchmarks not having platform-specific optimizations, `w
 
 Node is a little bit behind, running at around 49% the speed of native code.
 
-Of course, `wasm3` runs fine on `aarch64`, but at about 3% of the native speed.
+Of course, `wasm3` runs fine on `aarch64`, but at about 3% of native speed.
 
 ![webassembly benchmark with wasm3 results on ARM](aarch64-with-wasm3.png)
 
