@@ -145,7 +145,7 @@ On this platform, with benchmarks not having platform-specific optimizations, `w
 
 Node is a little bit behind, running at around 49% the speed of native code.
 
-Even with the same backend, `wasmer` is behind `wasmtime`, even on `aarch64`. `wasmtime` really got some nice performence improvements recently!
+Even with the same backend, `wasmer` is behind `wasmtime`, including on `aarch64`. `wasmtime` really got some nice performance improvements recently!
 
 Of course, `wasm3` runs fine on `aarch64`, but at about 3% of native speed.
 
