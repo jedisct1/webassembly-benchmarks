@@ -6,6 +6,8 @@ The benchmark covers different types of cryptographic primitives. Some are purel
 
 At the end of the day, this benchmark may not be a bad representative of how different compilers would optimized real-world code. It can also help quantify the overhead of WebAssembly vs native code.
 
+For the third time, WebAssembly runtimes were compared using this benchmark.
+
 ## State of the WebAssembly runtimes in 2021
 
 There are quite a lot of WebAssembly runtimes around. However, in early 2021, most of them are still in early stage, have been abandoned, or don't support the full specification or WASI.
