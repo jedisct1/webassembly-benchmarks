@@ -1,4 +1,4 @@
-Benchmark of WebAssembly runtimes - The 2021 Q1 edition
+# Benchmark of WebAssembly runtimes - 2021 Q1 edition
 
 Libsodium has been fully supporting WebAssembly as a target for quite a long time. This includes its built-in benchmark suite, that can run both in web browsers and in a variety of standalone WebAssembly runtimes.
 
@@ -37,7 +37,7 @@ The following runtimes were considered but couldn't be used to run the benchmark
 
 All of these were compiled from their git code on 02/21/2021, in release mode, with the exception of NodeJS, that was installed using the stock precompiled packages. Latest stable Rust, latest Xcode, everything was up-to-date.
 
-All the benchmarks are included in [https://libsodium.org](libsodium 1.0.18-stable) released on 02/21/2021, and were run using the `./dist/wasm32-wasi.sh --bench` command. The system compiler was LLVM 11.1.0, installed via Homebrew, and the output was automatically pre-optimized by the previous script with `wasm-opt -O3`. The exact same resulting WASM files were used with all the runtimes, on macOS and Linux.
+All the benchmarks are included in [libsodium 1.0.18-stable](https://libsodium.org) released on 02/21/2021, and were run using the `./dist/wasm32-wasi.sh --bench` command. The system compiler was LLVM 11.1.0, installed via Homebrew, and the output was automatically pre-optimized by the previous script with `wasm-opt -O3`. The exact same resulting WASM files were used with all the runtimes, on macOS and Linux.
 
 In order for the comparison between WebAssembly and native code to remain fair and representative of real-world performance, WebAssembly and native builds were compiled with the same, default optimization flags.
 
