@@ -43,7 +43,7 @@ In order for the comparison between WebAssembly and native code to remain fair a
 
 ## Compilers (JIT & AOT)
 
-!(webassembly benchmark results on macOS)[macos.png]
+![webassembly benchmark results on macOS](macos.png)
 
 Good news: all the tests passed flawlessly on all runtimes. Previously, the same tests triggered bugs in some implementations, that have been fixed since.
 
@@ -64,7 +64,7 @@ Trying to confirm that theory, I updated the `cranelift` dependency to the `0.23
 
 ## Interpreters
 
-!(webassembly interpreters benchmark results on macOS)[macos-with-interpreters.png]
+![webassembly interpreters benchmark results on macOS](macos-with-interpreters.png)
 
 Among the existing WebAssembly interpreters, two of them have good performance and WASI support: `wasm3` and `wamr` (Intel's micro-runtime).
 
@@ -81,7 +81,7 @@ Native code is about 30 times faster than `wasm3`. Let's face it: this is quite 
 
 ## Battle of the LLVMs
 
-!(webassembly benchmark results on Linux)[linux-x86_64.png]
+![webassembly benchmark results on Linux](linux-x86_64.png)
 
 `SSVM` (Second State VM) is an LLVM-based runtime focused on performance. It comes as two separate applications: a compiler, that generates a native shared library, and a runtime, that loads a library precompiled with the former tool. Like `wasmer`, it can insert "gas counting" operations, which is useful for smart contracts.
 
@@ -101,7 +101,7 @@ ERROR [default] execution failed: unreachable, Code: 0x89
 
 ## ARM CPUs
 
-!(webassembly benchmark results on ARM)[aarch64.png]
+![webassembly benchmark results on ARM](aarch64.png)
 
 The previous benchmarks were done on machines with an Intel CPU. But with ARM CPUs being omnipresent on mobile devices, and gaining a lot of traction on servers and laptops, I had to run quick benchmarks on an ARM-based CPU.
 
@@ -142,7 +142,7 @@ Node is a little bit behind, running at around 49% the speed of native code.
 
 Of course, `wasm3` runs fine on that `aarch64`, but at about 3% of the native speed.
 
-!(webassembly benchmark with wasm3 results on ARM)[aarch64-with-wasm3.png]
+![webassembly benchmark with wasm3 results on ARM](aarch64-with-wasm3.png)
 
 ## Individual results
 
