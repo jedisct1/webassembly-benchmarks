@@ -159,7 +159,7 @@ These new results are interesting. Amazing work has been done by all runtimes in
 
 If you are looking for a general recommendation for running WebAssembly code in a headless environment, here we go:
 
-Just use Node?
+-> Just use Node.
 
 Not exactly what I was expecting. But Node is probably a good answer for most people. V8 has become a really damn good engine to run WebAssembly code, Node has a working WASI implementation, so there is absolutely nothing wrong in using Node, even just to run a pure WebAssembly application.
 
