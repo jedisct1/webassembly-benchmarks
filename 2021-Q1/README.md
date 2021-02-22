@@ -163,7 +163,7 @@ If you are looking for a general recommendation for running WebAssembly code in 
 
 -> Just use Node.
 
-Not exactly what I was expecting. But Node is probably a good answer for most people. V8 has become a really damn good engine to run WebAssembly code, Node has a working WASI implementation, so there is absolutely nothing wrong in using Node, even just to run a pure WebAssembly application.
+Not exactly what I was expecting. But Node is probably a good answer for most people. V8 has become a really damn good engine to run WebAssembly code, Node has a working WASI implementation, so there is absolutely nothing wrong with using Node, even just to run a pure WebAssembly application.
 
 This is a boring and conservative choice. But it does the job. Node has the advantage of being already available in most operating systems/linux distros. Instant integration with JavaScript is also a big plus. And you'll be only one step away from also running your code in a web browser or Electron, with comparable performance.
 
