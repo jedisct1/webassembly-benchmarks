@@ -35,7 +35,7 @@ Additional runtimes for that round:
 The following runtimes were considered but couldn't be used to run the benchmark:
 
 * [InNative](https://github.com/innative-sdk/innative): no WASI support
-* [fizzly](https://github.com/wasmx/fizzy): failed with `imported function wasi_snapshot_preview1.poll_oneoff is required`
+* [fizzy](https://github.com/wasmx/fizzy): failed with `imported function wasi_snapshot_preview1.poll_oneoff is required`
 
 All of these were compiled from their git code on 02/21/2021, in release mode, with the exception of NodeJS, that was installed using the stock precompiled packages. Latest stable Rust, latest Xcode, everything was up-to-date.
 
