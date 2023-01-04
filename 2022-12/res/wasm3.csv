@@ -1,0 +1,14 @@
+
+aead_aegis128l;17498697
+aead_aegis256;20073438
+aead_chacha20poly1305;386568
+aead_chacha20poly13052;750823
+aead_xchacha20poly1305;397182
+auth;97636
+auth2;4948
+auth3;9670
+auth5;50478213
+auth6;8605
+auth7;26226274
+box;1246281
+box2;1276945
